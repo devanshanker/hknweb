@@ -42,6 +42,7 @@ urlpatterns = [
     path('auth/', include('social_django.urls', namespace='social')),
     path('', landing.home, name='home'),
     path('<slug:temp>/', viewsShortlink.openLink),
+    path('polls/', include('hknweb.polls.urls')),
 ]
 
 if settings.DEBUG:
